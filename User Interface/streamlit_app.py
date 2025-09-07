@@ -1,3 +1,4 @@
+import joblib
 import streamlit as st
 import pandas as pd
 import pickle
@@ -5,11 +6,9 @@ import pickle
 st.set_page_config(page_title="❤️ Heart Disease Prediction", layout="centered")
 st.title("❤️ Heart Disease Prediction App")
 
-# Load trained pipeline
-with open("final_model.pkl", "rb") as f:
-    pipeline = pickle.load(f)
+pipeline = joblib.load("final_model.pkl")
 
-FEATURES = [
+FEATURES = [    
     "age", "sex", "cp", "fbs", "restecg", "thalach",
     "exang", "oldpeak", "slope", "ca", "thal"
 ]
