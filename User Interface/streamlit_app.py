@@ -6,7 +6,7 @@ import pickle
 st.set_page_config(page_title="❤️ Heart Disease Prediction", layout="centered")
 st.title("❤️ Heart Disease Prediction App")
 
-pipeline = joblib.load("final_model.pkl")
+pipeline = joblib.load("../Models/final_model.pkl")
 
 FEATURES = [    
     "age", "sex", "cp", "fbs", "restecg", "thalach",
